@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet, } from 'react-native';
 import {TextInput, Headline, Button} from 'react-native-paper';
 import globalStyles from '../styles/global';
 
 const NuevoCliente = () => {
 
-    const leerNombre = () => {
-        console.log('escribiendo....');
-    }
+     // campos formulario
+     const [nombre, setNombre] = useState('');
+     const [telefono, setTelefono] = useState('');
+     const [correo, setCorreo] = useState('');
+     const [empresa, setEmpresa] = useState('');
 
     return ( 
         <>
@@ -16,25 +18,29 @@ const NuevoCliente = () => {
                 <TextInput
                     label="Nombre"
                     placeholder="Juan Perez"
-                    onChangeText={(text) => leerNombre(text)}
+                    onChangeText={(text) => setNombre(text)}
+                    value={nombre}
                     style={styles.input}
                  />
                 <TextInput
                     label="Teléfono"
                     placeholder="111-444-5548"
-                    onChangeText={(text) => leerNombre(text)}
+                    onChangeText={(text) => setTelefono(text)}
+                    value={telefono}
                     style={styles.input}
                  />
                  <TextInput
                     label="Correo"
                     placeholder="correo@correo.com"
-                    onChangeText={(text) => leerNombre(text)}
+                    onChangeText={(text) => setCorreo(text)}
+                    value={correo}
                     style={styles.input}
                  />
                  <TextInput
                     label="Empresa"
                     placeholder="Nombre de la empresa"
-                    onChangeText={(text) => leerNombre(text)}
+                    onChangeText={(text) => setEmpresa(text)}
+                    value={empresa}
                     style={styles.input}
                  />
          
