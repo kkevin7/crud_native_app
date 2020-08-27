@@ -8,32 +8,11 @@
       "id": 1
     },
     {
-      "nombre": "Pedro",
-      "telefono": "77878-454",
-      "empresa": "Imacasa",
-      "correo": "correo",
-      "id": 2
-    },
-    {
-      "nombre": "Pedro",
-      "telefono": "77878-454",
-      "empresa": "Imacasa",
-      "correo": "correo",
-      "id": 3
-    },
-    {
       "nombre": "José Perez",
       "telefono": "75445-448545",
       "empresa": "Imacasa2",
       "correo": "correo",
       "id": 4
-    },
-    {
-      "nombre": "José Perez",
-      "telefono": "75445-448545",
-      "empresa": "Imacasa2",
-      "correo": "correo",
-      "id": 5
     },
     {
       "nombre": "Maria Flores",
