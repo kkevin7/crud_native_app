@@ -16,7 +16,7 @@ const NuevoCliente = ({navigation, route}) => {
 
      //detectar si estamos editando o no
     useEffect(() => {
-        if(cliente){
+        if(route.params.cliente){
             const {nombre, telefono, correo, empresa} = route.params.cliente;
             setNombre(nombre);
             setTelefono(telefono);
@@ -25,7 +25,7 @@ const NuevoCliente = ({navigation, route}) => {
         }else{
             console.log('NUEVO CLIENTE');
         }
-    })
+    },[])
 
      const guardarCliente = async () => {
          //Valirdar
@@ -38,13 +38,26 @@ const NuevoCliente = ({navigation, route}) => {
 
          //Guardar el cliente en la API
          try {
-             if(Platform.OS === 'ios'){
-                 //Para ios
-                await axios.post('http://localhost:3000/clientes', cliente);
-             }else{
-                // para android
-                await axios.post('http://10.0.2.2:3000/clientes', cliente);
-             }
+
+            if(route.params.cliente){
+                const {id} = route.params.cliente;
+                cliente.id;
+                if(Platform.OS === 'ios'){
+                    //Para ios
+                   await axios.put(`http://localhost:3000/clientes/${id}`, cliente);
+                }else{
+                   // para android
+                   await axios.put(`http://10.0.2.2:3000/clientes/${id}`, cliente);
+                }
+            }else{
+                if(Platform.OS === 'ios'){
+                    //Para ios
+                   await axios.post(`http://localhost:3000/clientes`, cliente);
+                }else{
+                   // para android
+                   await axios.post(`http://10.0.2.2:3000/clientes`, cliente);
+                }
+            }
          } catch (error) {
             console.log(error);
          }
