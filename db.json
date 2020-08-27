@@ -1,0 +1,25 @@
+{
+  "clientes": [
+    {
+      "nombre": "Pedro",
+      "telefono": "77878-454",
+      "empresa": "Imacasa",
+      "correo": "correo",
+      "id": 1
+    },
+    {
+      "nombre": "Pedro",
+      "telefono": "77878-454",
+      "empresa": "Imacasa",
+      "correo": "correo",
+      "id": 2
+    },
+    {
+      "nombre": "Pedro",
+      "telefono": "77878-454",
+      "empresa": "Imacasa",
+      "correo": "correo",
+      "id": 3
+    }
+  ]
+}
