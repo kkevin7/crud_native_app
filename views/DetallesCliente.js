@@ -1,7 +1,8 @@
 import React from 'react';
 import {View, StyleSheet, Text,} from 'react-native';
 
-const DetallesCliente = () => {
+const DetallesCliente = ({route}) => {
+    const {item } = route.params;
     return ( 
         <>
         <Text>DetallesCliente</Text>
