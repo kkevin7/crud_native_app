@@ -20,3 +20,8 @@ implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
 
 // en el App.js 
 import 'react-native-gesture-handler';
+
+//React Native Paper
+yarn add react-native-paper
+yarn add react-native-vector-icons
+# react-native link react-native-vector-icons
