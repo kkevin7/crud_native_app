@@ -11,6 +11,22 @@ const NuevoCliente = () => {
      const [correo, setCorreo] = useState('');
      const [empresa, setEmpresa] = useState('');
 
+     const guardarCliente = () => {
+         //Valirdar
+        if(nombre === '' || telefono === '' || correo === '' || empresa === ''){
+            console.log('Hay campos vacios');
+            return;
+        }
+         //Generar el cliente
+
+         //Guardar el cliente en la API
+
+         //Redireccionar
+
+         //Limpiar el form (opcional)
+
+     }
+
     return ( 
         <>
             <View style={globalStyles.contenedor}>
@@ -43,6 +59,9 @@ const NuevoCliente = () => {
                     value={empresa}
                     style={styles.input}
                  />
+                 <Button icon="pencil-circle" mode="contained" onPress={() => guardarCliente()}>
+                     Guardar Cliente
+                 </Button>
          
             </View>
         </>
