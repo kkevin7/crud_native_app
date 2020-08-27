@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from 'react';
-import {View, StyleSheet, Text, Platform} from 'react-native';
+import {View, StyleSheet, Text, Platform, FlatList} from 'react-native';
+import {List} from 'react-native-paper';
 import axios from 'axios';
+
 
 const Inicio = () => {
 
@@ -30,7 +32,18 @@ const Inicio = () => {
 
     return ( 
         <>
-        <Text>Inicio</Text>
+        <View>
+            <FlatList 
+                keyExtractor={cliente => (cliente.id).toString()}
+                data={clientes}
+                renderItem={({item}) => (
+                    <List.Item
+                        title={item.nombre}
+                        description={item.empresa}
+                    />
+                )}
+            />
+        </View>
         </>
      );
 }
