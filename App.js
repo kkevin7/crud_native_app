@@ -53,13 +53,13 @@ const App = () => {
               component={Inicio}
               options={({navigation, route}) => ({
                 title: 'Inicio',
-                headerLeft: (props) => (
-                  <BarraSuperior
-                    {...props}
-                    navigation={navigation}
-                    route={route}
-                  />
-                ),
+                // headerLeft: (props) => (
+                //   <BarraSuperior
+                //     {...props}
+                //     navigation={navigation}
+                //     route={route}
+                //   />
+                // ),
               })}
             />
             <Stack.Screen
