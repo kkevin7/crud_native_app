@@ -1,8 +1,8 @@
 import React,{useEffect, useState} from 'react';
 import {View, StyleSheet, Text, Platform, FlatList} from 'react-native';
-import {List} from 'react-native-paper';
+import {List, Headline} from 'react-native-paper';
 import axios from 'axios';
-
+import globalStyles from '../styles/global';
 
 const Inicio = () => {
 
@@ -32,7 +32,8 @@ const Inicio = () => {
 
     return ( 
         <>
-        <View>
+        <View style={globalStyles.contenedor}>
+            <Headline style={globalStyles.titulo}>{clientes.length > 0 ? "Clientes" : "Aún no hay Clientes"}</Headline>
             <FlatList 
                 keyExtractor={cliente => (cliente.id).toString()}
                 data={clientes}
