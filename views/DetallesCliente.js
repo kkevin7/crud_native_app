@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Alert} from 'react-native';
-import {Headline, Text, Subheading, Button} from 'react-native-paper';
+import {Headline, Text, Subheading, Button, FAB} from 'react-native-paper';
 import globalStyles from '../styles/global';
 import axios from 'axios';
 
@@ -62,9 +62,21 @@ const DetallesCliente = ({navigation, route}) => {
         <Button
           mode="contained"
           icon="cancel"
+          style={styles.btnDelete}
           onPress={() => mostrarConfirmacion()}>
           Eliminar Cliente
         </Button>
+
+        <FAB
+          icon="pencil"
+          style={globalStyles.fab}
+          onPress={() =>
+            navigation.navigate('NuevoCliente', {
+              cliente: route.params.item,
+              setConsultarAPI,
+            })
+          }
+        />
       </View>
     </>
   );
@@ -75,9 +87,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontSize: 18,
   },
-  boton: {
+  btnDelete: {
     marginTop: 100,
-    backgroundColor: 'red',
+    backgroundColor: '#FA2A3A',
   },
 });
 

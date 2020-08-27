@@ -57,7 +57,7 @@ const Inicio = ({navigation}) => {
             />
             <FAB
                 icon="plus"
-                style={styles.fab}
+                style={globalStyles.fab}
                 onPress={() => navigation.navigate('NuevoCliente', {setConsultarAPI})}
             />
         </View>
@@ -66,12 +66,7 @@ const Inicio = ({navigation}) => {
 }
 
 const styles = StyleSheet.create({
-    fab: {
-        position: 'absolute',
-        margin: 0,
-        right: 0,
-        bottom: 20,
-    }
+    
 });
  
 export default Inicio;
